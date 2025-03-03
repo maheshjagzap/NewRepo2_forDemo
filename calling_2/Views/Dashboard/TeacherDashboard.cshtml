@@ -1,0 +1,20 @@
+﻿@using Newtonsoft.Json
+
+@{
+    ViewBag.Title = "Teacher Dashboard";
+}
+
+<h2>Teacher Dashboard</h2>
+
+@if (ViewBag.TeacherData != null)
+{
+    <div>
+        <h3>Teacher Details</h3>
+        <!-- Render teacher dashboard data here -->
+        <pre>@JsonConvert.SerializeObject(ViewBag.TeacherData)</pre>
+    </div>
+}
+else
+{
+    <div>@ViewBag.ErrorMessage</div>
+}

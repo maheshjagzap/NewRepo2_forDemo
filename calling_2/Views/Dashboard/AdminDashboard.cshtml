@@ -1,0 +1,20 @@
+﻿@using Newtonsoft.Json
+
+@{
+    ViewBag.Title = "Admin Dashboard";
+}
+
+<h2>Admin Dashboard</h2>
+
+@if (ViewBag.AdminData != null)
+{
+    <div>
+        <h3>Welcome, Admin!</h3>
+        <!-- Render admin dashboard data here as JSON -->
+        <pre>@Html.Raw(JsonConvert.SerializeObject(ViewBag.AdminData, Formatting.Indented))</pre>
+    </div>
+}
+else
+{
+    <div>@ViewBag.ErrorMessage</div>
+}

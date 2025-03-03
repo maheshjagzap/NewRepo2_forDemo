@@ -1,0 +1,20 @@
+﻿@using Newtonsoft.Json
+
+
+@{
+    ViewBag.Title = "View Attendance";
+}
+
+<h2>View Attendance</h2>
+
+@if (ViewBag.AttendanceRecords != null)
+{
+    <div>
+        <h3>Attendance Records</h3>
+        <pre>@Html.Raw(JsonConvert.SerializeObject(ViewBag.AttendanceRecords, Formatting.Indented))</pre>
+    </div>
+}
+else
+{
+    <div>No attendance records found for this user.</div>
+}
