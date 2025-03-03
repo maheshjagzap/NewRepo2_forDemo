@@ -20,7 +20,7 @@ namespace calling_2.Controllers
 
         public IActionResult Privacy()
         {
-            return View();
+            return View("privacy");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
